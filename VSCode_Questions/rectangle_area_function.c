@@ -1,15 +1,18 @@
-
 #include <stdio.h>
-long long rectangleArea(long long length, long long width)
+
+long long area(int length, int width)
 {
-    long long area = length * width;
-    return area;
+    return (long long)length * width;
 }
+
 int main()
 {
-    long long length, width;
-    scanf("%lld %lld", &length, &width);
-    long long result = rectangleArea(length, width);
-    printf("%lld", result);
+    int length, width;
+
+    printf("Enter length and width: ");
+    scanf("%d %d", &length, &width);
+
+    printf("Area = %lld", area(length, width));
+
     return 0;
 }

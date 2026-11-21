@@ -1,7 +1,12 @@
 #include <stdio.h>
-int evaluate(int x)
+
+int main()
 {
-    int result;
+    int x, result;
+
+    printf("Enter x: ");
+    scanf("%d", &x);
+
     if(x < 0)
     {
         result = x*x + 2*x + 1;
@@ -14,13 +19,8 @@ int evaluate(int x)
     {
         result = 5*x - 7;
     }
-    return result;
-}
-int main()
-{
-    int x;
-    scanf("%d", &x);
-    printf("%d", evaluate(x));
+
+    printf("Result = %d", result);
+
     return 0;
 }
-

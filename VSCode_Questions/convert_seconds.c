@@ -1,17 +1,17 @@
 #include <stdio.h>
-void convertSeconds(int totalSeconds)
-{
-    int hours, minutes, seconds;
-    hours = totalSeconds / 3600;
-    int remaining = totalSeconds % 3600;
-    minutes = remaining / 60;
-    seconds = remaining % 60;
-    printf("%d %d %d", hours, minutes, seconds);
-}
+
 int main()
 {
-    int totalSeconds;
+    int totalSeconds, hours, minutes, seconds;
+
+    printf("Enter total seconds: ");
     scanf("%d", &totalSeconds);
-    convertSeconds(totalSeconds);
+
+    hours = totalSeconds / 3600;
+    minutes = (totalSeconds % 3600) / 60;
+    seconds = totalSeconds % 60;
+
+    printf("%d %d %d", hours, minutes, seconds);
+
     return 0;
 }
